@@ -11,6 +11,36 @@
 
 <style>
 
+body::before{
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(circle,#caa86b20,transparent 70%);
+top:-250px;
+right:-250px;
+filter:blur(80px);
+animation:floatLight 15s ease-in-out infinite;
+pointer-events:none;
+z-index:-1;
+}
+
+@keyframes floatLight{
+
+0%{
+transform:translate(0,0);
+}
+
+50%{
+transform:translate(-80px,80px);
+}
+
+100%{
+transform:translate(0,0);
+}
+
+}    
+
 :root{
 --gold:#caa86b;
 --dark:#0f0f0f;
